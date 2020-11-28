@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Editor</title>
+<link href="editor.css" type="text/css" rel="stylesheet">
+<script src = "editor.js"></script>
+</head>
+<body style = "background-color : black">
+<header>
+	
+</header>
+<section id = "section1">
+	<aside id = "aside">
+		<ul >
+			<li id ="0">
+				<label class = "input-file-button">새로 만들기</label>
+			</li>
+			<li id ="1">
+				<label class="input-file-button" for="input-file">
+  					파일 불러오기
+				</label>
+				<input type="file" id="input-file" style="display:none"  onchange = "setThumbnail(event);"  multiple/>
+			</li>
+			<li id ="2"><label class = "input-file-button">새 레이어</label></li>
+			<li id ="3"><label class = "input-file-button">글자 칸 추가하기</label></li>
+			<li id ="4"><label class = "input-file-button">글자 속성 편집</label></li>
+			<li id ="5"><label class = "input-file-button">글자 설정</label></li>
+			<li id ="6"><label class = "input-file-button">기타 설정</label></li>
+		</ul>
+	</aside>
+	<div id = "div1"> 
+		<div id = "emoticon">
+		</div>
+	</div>
+</section>
+
+
+
+<section id = "section2">
+	<div id = "div2">
+	</div>
+</section>
+</body>
+</html>
