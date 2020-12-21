@@ -1,91 +1,180 @@
 
 #a {
-	background-color : gray;
-	height : 610px;
+   background-color : #525252;
+   height : 610px;
+}
+#a2 {
+   background-color : #525252;
+   height : 610px;
 }
 
-#section1 {
-	background-color : gray;
-	display : block;
-	width : 74%;
-	float : right;
+#menu {
+   background-color : #525252;
 }
+
+#menu > ul {
+   padding-top : 10px;
+   text-align : center;
+}
+#menu_icon {
+   width : 30px;
+   hwight : 30px;
+}
+#menu_icon_T {
+   width : 28px;
+   hwight : 28px;
+}
+/*
+#m7 {
+   float : right;
+}
+*/
+#section1 {
+   background-color : #525252;
+   display : block;
+   width : 79%;
+   float : left;
+}
+#section1_r {
+   backgroung-color : #525252;
+   display : block;
+   width : 20%;
+   float : right;
+}
+
 #whole {
-	text-align:left;
-	width:100%;
-	margin : auto;
+   text-align:left;
+   width:100%;
+   margin : auto;
+   
 
 }
 #section2 {
    clear : both;
-   padding-top : 2%;
+   padding-top : 0.2%;
+   color : white;
+}
+#subtitle {
+   font-size : 1.2em;
 }
 
-#aside {
-	background-color : gray;
-	float : left;
-	width : 24%;
-	display : block;
-	height : 610px;
-	border-right-style : solid;
-	border-right-color : black;
-}
-
-aside ul {
+nav ul {
    list-style-type:none;
-   text-align: center;
+   text-align: left;
    /*margin:20;
-	*/
-	
-   font-family: a¿¾³¯»çÁø°ü4, sans_serif;
-   font-size:1.5em;
+   */
+   
+   color : white;
+   font-size:1em;
 }
 
-aside ul li {
+nav ul li {
    padding-top: 12px;
    padding-bottom: 25px;
    padding-right: 50px;
+   display : inline-block;
 }
 
-.input-file-button{
-	
-  padding: 6px 50px;
-  background-color:black;
-  border-radius: 4px;
-  color: white;
-  cursor: pointer;
+.input-file-button {
+   display : block;
 }
-
-label {
-	display : block;
-	width : 200px;
-	
-}
-
 
 #emoticon > img {
-	margin : auto;
-	display : block;
-	padding-top : 100px;
+   margin : auto;
+   display : block;
+   padding-top : 100px;
 }
 
 #div1 {
-	background-color : gray;
-	height : 610px;
-	
+   background-color : #525252;
+   height : 610px;
+   
 }
 #div1 > img {
-	margin : auto;
-	display : block;
-	padding-top : 50px;
+   margin : auto;
+   display : block;
+   padding-top : 50px;
+}
+#text > img {
+   margin-top : 25px;
+   display : inline-block;
+   padding-top : 50px;
+}
+#textT > img {
+   margin-top : 30px;
+   display : inline-block;
+   padding-top : 50px;
+}
+#name {
+   padding-top : 460px;
+   height : 50px;
+   weight : 1000px;
+}
+#date {
+   padding-top : 460px;
+   height : 50px;
+   weight : 1000px;
+   margin-left : 300px;
 }
 #emoticon {
-	margin : auto;
+   margin : auto;
 }
 
 #div2 {
-	/*margin-top : 30px;*/
-	background-color : gray;
-	display : block;
-	height : 250px;
+   /*margin-top : 30px;*/
+   background-color : #525252;
+   display : block;
+   height : 250px;
+}
+
+#newul {
+   list-style-type:none;
+   margin-top : -0.5px;
+   color : white;
+   font-size : 1.2em;
+}
+
+#newul > li {
+   padding-top : 15px;
+   padding-bottom : 10px;
+   
+}
+
+#listD {
+   padding : 10px;
+   border-bottom : 0.5px solid #2b2b2b;
+   color : white;
+   font-size : 1.2em;
+   
+}
+#talkul {
+   list-style-type:none;
+   margin-top : -0.5px;
+   color : white;
+   font-size : 1.2em;
+}
+
+#talkul > li {
+   padding-top : 15px;
+   padding-bottom : 10px;
+   padding-right : 40px;
+   display : inline-block;
+}
+
+#listT {
+   padding : 10px;
+   border-bottom : 0.5px solid #2b2b2b;
+   color : white;
+   font-size : 1.2em;
+   
+}
+
+#talk {
+   width : 50px;
+   height : 50px;
+}
+
+#textTalk {
+   width : 350px;
+   height : 400px;
 }

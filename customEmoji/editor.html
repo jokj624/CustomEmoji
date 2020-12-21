@@ -6,37 +6,74 @@
 <link href="editor.css" type="text/css" rel="stylesheet">
 <script src = "editor.js"></script>
 </head>
-<body style = "background-color : black">
+<body style = "background-color : #2b2b2b; overflow-x : auto">
 
 <div id = "whole">
-<aside id = "aside">
-		<ul>
-			<li id ="0"><label class = "input-file-button" onclick = "clearImg(event)">새로 만들기</label></li>
-			<li id ="1">
-				<label class="input-file-button" for="input-file">
-  					파일 불러오기
-				</label>
-				<input type="file" id="input-file" style="display:none"  onchange = "setThumbnail(event);"  multiple/>
-			</li>
-			<li id ="2"><label class = "input-file-button" onclick = "setLayer(event)">새 레이어</label></li>
-			<li id ="3"><label class = "input-file-button">글자 칸 추가하기</label></li>
-			<li id ="4"><label class = "input-file-button">글자 속성 편집</label></li>
-			<li id ="5"><label class = "input-file-button">글자 설정</label></li>
-			<li id ="6"><label class = "input-file-button">기타 설정</label></li>
-		</ul>
-</aside>
+<nav id = "menu" style ="font-family : a타이틀고딕1, sans_serif">
+      <ul>
+         <li id ="m0"><label class = "input-file-button" onclick = "clearImg(event)">
+                  <img id = "menu_icon" src = './img/new.png'><br>New</label></li>
+         <li id ="m1">
+            <label class="input-file-button" for="input-file">
+               <img id = "menu_icon" src = './img/folder.png' style = "margin-left : -1px;">
+               <br>
+                 File
+            </label>
+            <input type="file" id="input-file" style="display:none"  onchange = "setThumbnail(event);"  multiple/>
+         </li>
+         <li id ="m2"><label class = "input-file-button" onclick = "setLayer(event)">
+                  <img id = "menu_icon" src = './img/layers.png' style = "padding-left : 5px;">
+                  <br>
+                  Layer</label></li>
+         <li id ="m3"><label class = "input-file-button" onclick = "editText(event)">
+                  <img id = "menu_icon_T" src = './img/type.png' style = "padding-left : 3px;">
+                  <br>
+                  Text</label></li>
+         <li id ="m4"><label class = "input-file-button" onclick = "dateandname(event)">
+                  <img id = "menu_icon" src = './img/calender.png' style = "padding-left : 12px;">
+                  <br>
+                  Option</label></li>
+         <li id ="m5"><label class = "input-file-button">
+                  <img id = "menu_icon" src = './img/save.png' style = "padding-left : 3px;">
+                  <br>
+                  Save</label></li>
+         <li id ="m6"><label class = "input-file-button">
+                  <img id = "menu_icon" src = './img/settings.png' style = "padding-left : 12px;">
+                  <br>
+                  Setting</label></li>
+         <li id ="m7"><label class = "input-file-button" onclick = "undo(event)">
+                  <img id = "menu_icon" src = './img/undo.png' style = "padding-left : 5px;">
+                  <br>
+                  Undo</label></li>
+      </ul>
+</nav>
 <section id = "section1">
-	<div id = "a">
-		<div id = "div1" style = 'position : absolute; z-index :1; left : 40%;'>
-		</div>
-		<div id = "emoticon" style = 'position : absolute; z-index :2; left : 50%;'>
-		</div>
-	</div>
+   <div id = "a" style = 'align : center;'>
+      <div id = "div1" style = 'position : absolute; z-index :1; left : 15%'>
+      </div>
+      <div id = "emoticon" style = 'position : absolute; z-index :2; left : 25%'>
+      </div>
+      <div id = "text" style = 'position : absolute; z-index :3; left : 25%'>
+      </div>
+      <div id = "textT" style = 'position : absolute; z-index :4; left :45%'>
+      </div>
+      <div id = "date_div" style = 'position : absolute; z-index :5; left :25%'>
+      </div>
+       <div id = "name_div" style = 'position : absolute; z-index :5; left :25%'>
+      </div>
+   </div>
 </section>
 
-<section id = "section2">
-	<div id = "div2">
-	</div>
+<section id = "section1_r" style = "background-color : #525252; font-family : a타이틀고딕1, sans_serif">
+   <div id = "a2">
+   </div>
+</section>
+
+<section id = "section2" style ="font-family : a타이틀고딕1, sans_serif">
+   <div id = subtitle>Project</div>
+   <div id = "div2">
+   
+   </div>
 </section>
 </div>
 </body>
