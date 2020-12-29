@@ -1,0 +1,228 @@
+#whole {
+	width:100%;
+	margin : auto;
+
+}
+
+#a {
+	background-color : #525252;
+	height : 610px;
+}
+#a2 {
+	background-color : #525252;
+	height : 610px;
+}
+
+#menu {
+	background-color : #525252;
+}
+
+#menu > ul {
+	padding-top : 10px;
+	text-align : center;
+}
+#menu_icon {
+	width : 30px;
+	height : 30px;
+}
+#menu_icon_T {
+	width : 28px;
+	height : 28px;
+}
+/*
+#m7 {
+	float : right;
+}
+*/
+#section1 {
+	background-color : #525252;
+	display : block;
+	width : 79%;
+	float : left;
+	text-align : center;
+}
+#section1_r {
+	background-color : #525252;
+	display : block;
+	width : 20%;
+	float : right;
+}
+
+#section2 {
+   clear : both;
+   padding-top : 0.2%;
+   color : white;
+}
+#subtitle {
+	font-size : 1.2em;
+}
+
+nav ul {
+   list-style-type:none;
+   text-align: left;
+   /*margin:20;
+	*/
+	
+   color : white;
+   font-size:1em;
+}
+
+nav ul li {
+   padding-top: 12px;
+   padding-bottom: 25px;
+   padding-right: 50px;
+   display : inline-block;
+}
+
+.input-file-button {
+	display : block;
+}
+
+
+#div1 > img {
+	margin : auto;
+	display : block;
+	padding-top : 50px;
+}
+
+#text {
+	top: 27%;
+	left: 39%;
+	width : 300px;
+	height : 50px;
+	margin-top : -25px;
+	margin-left : -150px;
+}
+
+#text_form > input{
+	border: 1px solid red;
+	border-radius : 0px;
+	height : 50px;
+	width : 300px;
+	background-color:transparent;
+	font-size : 1em;
+}
+
+#textT {
+	top: 35%;
+	left: 50%;
+	width : 150px;
+	height : 250px;
+}
+
+#textT_form > textarea{
+	border: 1px solid red;
+	border-radius : 0px;
+	height : 250px;
+	width : 150px;
+	background-color:transparent;
+	font-size : 1.5em;
+}
+
+.datename{
+	display : inline-block;
+	text-align: center;
+	position : relative;
+	top: 85%;
+	width : 400px;
+	height : 60px;
+	margin-top : -30px;
+}
+#name {
+	height : 50px;
+	position : relative;
+}
+#date {
+	height : 50px;
+	position : relative;
+	left: 200%;
+}
+#emoticon {
+	top: 50%;
+	left: 39%;
+	width : 300px;
+	height : 300px;
+	margin-top : -150px;
+	margin-left : -150px;
+}
+
+#div2 {
+	/*margin-top : 30px;*/
+	background-color : #525252;
+	display : block;
+	height : 250px;
+	
+}
+
+
+#newul {
+	list-style-type:none;
+	margin-top : -0.5px;
+	color : white;
+	font-size : 1.2em;
+}
+
+#newul > li {
+	padding-top : 15px;
+	padding-bottom : 10px;
+	
+}
+#newulT {
+	list-style-type:none;
+	margin-top : -0.5px;
+	color : white;
+	font-size : 1.2em;
+}
+
+#newulT > li {
+	padding-top : 15px;
+	padding-bottom : 10px;
+	
+}
+
+#listD {
+	padding : 10px;
+	border-bottom : 0.5px solid #2b2b2b;
+	color : white;
+	font-size : 1.2em;
+	
+}
+
+#listTO {
+	padding : 10px;
+	border-bottom : 0.5px solid #2b2b2b;
+	color : white;
+	font-size : 1.2em;
+	
+}
+#talkul {
+	list-style-type:none;
+	margin-top : -0.5px;
+	color : white;
+	font-size : 1.2em;
+}
+
+#talkul > li {
+	padding-top : 15px;
+	padding-bottom : 10px;
+	padding-right : 40px;
+	display : inline-block;
+}
+
+#listT {
+	padding : 10px;
+	border-bottom : 0.5px solid #2b2b2b;
+	color : white;
+	font-size : 1.2em;
+	
+}
+
+#talk {
+	width : 50px;
+	height : 50px;
+}
+
+#textTalk {
+	width : 350px;
+	height : 400px;
+}

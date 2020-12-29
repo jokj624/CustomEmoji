@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Editor</title>
+<link href="editor.css" type="text/css" rel="stylesheet">
+<script src = "editor.js"></script>
+</head>
+<body style = "background-color : #2b2b2b; overflow-x : auto">
+
+<div id = "whole">      
+<nav id = "menu" style ="font-family : a타이틀고딕1, sans_serif">
+		<ul>
+			<li id ="m0"><label class = "input-file-button" onclick = "clearImg(event)">
+						<img id = "menu_icon" src = './img/new.png'><br>New</label></li>
+			<li id ="m1">
+				<label class="input-file-button" for="input-file">
+					<img id = "menu_icon" src = './img/folder.png' style = "margin-left : -1px;">
+					<br>
+  					File
+				</label>    
+				<input type="file" id="input-file" style="display:none"  onchange = "setThumbnail(event);"  multiple/>
+			</li>
+			<li id ="m3"><label class = "input-file-button" onclick = "editText(event)">
+						<img id = "menu_icon_T" src = './img/type.png'>
+						<br>
+				 		Text</label></li>
+			<li id ="m4"><label class = "input-file-button" onclick = "dateandname(event)">
+						<img id = "menu_icon" src = './img/calender.png'>
+						<br>
+						Option</label></li>
+			<li id ="m5"><label class = "input-file-button">
+						<img id = "menu_icon" src = './img/save.png'>
+						<br>
+						Save</label></li>
+			<li id ="m6"><label class = "input-file-button">
+						<img id = "menu_icon" src = './img/settings.png'>
+						<br>
+						Setting</label></li>
+			<li id ="m7"><label class = "input-file-button" onclick = "undo(event)">
+						<img id = "menu_icon" src = './img/undo.png'>
+						<br>
+						Undo</label></li>
+		</ul>
+</nav>
+
+
+<section id = "section1">
+	<div id = "a" style = 'text-align : center;'>
+		<div id = "emoticon" style = 'position : absolute; z-index :2;'>
+		</div>
+		<div id = "text" style = 'position : absolute; z-index :3;'>
+		<form id ="text_form">
+		</form>
+		</div>
+		<div id = "textT" style = 'position : absolute; z-index :4;'>
+		<form id ="textT_form">
+		</form>
+		</div>
+		<div class = "datename">
+			<div id = "name_div" style = 'position : absolute; z-index :5;'>
+			</div>
+			<div id = "date_div" style = 'position : absolute; z-index :5;'>
+			</div>
+		</div>
+	</div>
+</section>
+
+
+<section id = "section1_r" style = "background-color : #525252; font-family : a타이틀고딕1, sans_serif">
+	<div id = "a2">
+	</div>
+</section>
+
+
+<section id = "section2" style ="font-family : a타이틀고딕1, sans_serif">
+	<div id = subtitle>Project</div>
+	<div id = "div2">
+	
+	</div>
+</section>
+</div>
+</body>
+</html>
