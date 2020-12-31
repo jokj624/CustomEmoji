@@ -1,69 +1,68 @@
+#whole {
+	width:100%;
+	margin : auto;
+
+}
 
 #a {
-   background-color : #525252;
-   height : 610px;
+	background-color : #525252;
+	height : 610px;
 }
 #a2 {
-   background-color : #525252;
-   height : 610px;
+	background-color : #525252;
+	height : 610px;
 }
 
 #menu {
-   background-color : #525252;
+	background-color : #525252;
 }
 
 #menu > ul {
-   padding-top : 10px;
-   text-align : center;
+	padding-top : 10px;
+	text-align : center;
 }
 #menu_icon {
-   width : 30px;
-   hwight : 30px;
+	width : 30px;
+	height : 30px;
 }
 #menu_icon_T {
-   width : 28px;
-   hwight : 28px;
+	width : 28px;
+	height : 28px;
 }
 /*
 #m7 {
-   float : right;
+	float : right;
 }
 */
 #section1 {
-   background-color : #525252;
-   display : block;
-   width : 79%;
-   float : left;
+	background-color : #525252;
+	display : block;
+	width : 79%;
+	float : left;
+	text-align : center;
 }
 #section1_r {
-   backgroung-color : #525252;
-   display : block;
-   width : 20%;
-   float : right;
+	background-color : #525252;
+	display : block;
+	width : 20%;
+	float : right;
 }
 
-#whole {
-   text-align:left;
-   width:100%;
-   margin : auto;
-   
-
-}
 #section2 {
    clear : both;
    padding-top : 0.2%;
    color : white;
 }
 #subtitle {
-   font-size : 1.2em;
+	font-size : 1.2em;
 }
 
 nav ul {
    list-style-type:none;
    text-align: left;
    /*margin:20;
-   */
-   
+	*/
+	
    color : white;
    font-size:1em;
 }
@@ -76,105 +75,181 @@ nav ul li {
 }
 
 .input-file-button {
-   display : block;
+	display : block;
 }
 
-#emoticon > img {
-   margin : auto;
-   display : block;
-   padding-top : 100px;
-}
 
-#div1 {
-   background-color : #525252;
-   height : 610px;
-   
-}
 #div1 > img {
-   margin : auto;
-   display : block;
-   padding-top : 50px;
+	margin : auto;
+	display : block;
+	padding-top : 50px;
 }
-#text > img {
-   margin-top : 25px;
-   display : inline-block;
-   padding-top : 50px;
+
+#text {
+	top: 27%;
+	left: 39%;
+	width : 300px;
+	height : 50px;
+	margin-top : -25px;
+	margin-left : -150px;
 }
-#textT > img {
-   margin-top : 30px;
-   display : inline-block;
-   padding-top : 50px;
+
+#text_form > input{
+	border: 1px solid red;
+	border-radius : 0px;
+	height : 50px;
+	width : 300px;
+	background-color:transparent;
+	font-size : 1em;
+}
+
+#textT {
+	top: 35%;
+	left: 50%;
+	width : 150px;
+	height : 250px;
+}
+
+#textT_form > textarea{
+	border: 1px solid red;
+	border-radius : 0px;
+	height : 250px;
+	width : 150px;
+	background-color:transparent;
+	font-size : 1.5em;
+}
+
+select {
+	width: 200px;
+	padding: .6em .5em;
+	margin-top : 1em;
+	border: 1px solid #2b2b2b;
+	font-family: inherit;
+	font-size : 0.8em;
+	background: url("img/arrow.png") no-repeat 95% 50%;
+	border-radius: 0px;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	color: white;
+}
+
+option{
+	color : black;
+	backgrond-color: transparent;
+	font-size : 1.2em;
+}
+input[type=color]{
+    padding : 0% 0%;
+    border: none;
+    background-color : transparent;
+    outline: none;
+    margin-left : 10px;
+    -webkit-appearance: none;
+}
+
+.datename{
+	display : inline-block;
+	text-align: center;
+	position : relative;
+	top: 85%;
+	width : 400px;
+	height : 60px;
+	margin-top : -30px;
 }
 #name {
-   padding-top : 460px;
-   height : 50px;
-   weight : 1000px;
+	height : 50px;
+	position : relative;
 }
 #date {
-   padding-top : 460px;
-   height : 50px;
-   weight : 1000px;
-   margin-left : 300px;
+	height : 50px;
+	position : relative;
+	left: 200%;
 }
 #emoticon {
-   margin : auto;
+	top: 50%;
+	left: 39%;
+	width : 300px;
+	height : 300px;
+	margin-top : -150px;
+	margin-left : -150px;
 }
 
 #div2 {
-   /*margin-top : 30px;*/
-   background-color : #525252;
-   display : block;
-   height : 250px;
+	/*margin-top : 30px;*/
+	background-color : #525252;
+	display : block;
+	height : 250px;
+	
 }
 
+
 #newul {
-   list-style-type:none;
-   margin-top : -0.5px;
-   color : white;
-   font-size : 1.2em;
+	list-style-type:none;
+	margin-top : -0.5px;
+	color : white;
+	font-size : 1.2em;
 }
 
 #newul > li {
-   padding-top : 15px;
-   padding-bottom : 10px;
-   
+	padding-top : 15px;
+	padding-bottom : 10px;
+	
+}
+#newulT {
+	list-style-type:none;
+	margin-top : -0.5px;
+	color : white;
+	font-size : 1.2em;
 }
 
+#newulT > li {
+	padding-top : 10px;
+/*	padding-bottom : 10px;*/
+}
 #listD {
-   padding : 10px;
-   border-bottom : 0.5px solid #2b2b2b;
-   color : white;
-   font-size : 1.2em;
-   
+	padding : 10px;
+	border-bottom : 0.5px solid #2b2b2b;
+	color : white;
+	font-size : 1.2em;
+	
+}
+
+#listTO {
+	padding : 10px;
+	border-bottom : 0.5px solid #2b2b2b;
+	color : white;
+	font-size : 1.2em;
+	
 }
 #talkul {
-   list-style-type:none;
-   margin-top : -0.5px;
-   color : white;
-   font-size : 1.2em;
+	list-style-type:none;
+	margin-top : -0.5px;
+	color : white;
+	font-size : 1.2em;
 }
 
 #talkul > li {
-   padding-top : 15px;
-   padding-bottom : 10px;
-   padding-right : 40px;
-   display : inline-block;
+	padding-top : 15px;
+	padding-bottom : 10px;
+	padding-right : 40px;
+	display : inline-block;
 }
 
 #listT {
-   padding : 10px;
-   border-bottom : 0.5px solid #2b2b2b;
-   color : white;
-   font-size : 1.2em;
-   
+	padding : 10px;
+	border-bottom : 0.5px solid #2b2b2b;
+	color : white;
+	font-size : 1.2em;
+	
 }
 
 #talk {
-   width : 50px;
-   height : 50px;
+	width : 50px;
+	height : 50px;
 }
 
 #textTalk {
-   width : 350px;
-   height : 400px;
+	width : 350px;
+	height : 400px;
 }
