@@ -27,14 +27,20 @@ function clearImg(event) {
 	var a2 = document.getElementById("a2");
 	var date_div = document.getElementById("date_div");
 	var name_div = document.getElementById("name_div");
-	var a_div = document.getElementById("a");
-	
+	var text_div = document.getElementById("text_form");
+	var textT_div = document.getElementById("textT_form");
 	
 	emoticon.innerHTML = "";
 	a2.innerHTML = "";
 	date_div.innerHTML = "";
 	name_div.innerHTML = "";
-	a_div.innerHTML = "";
+	text_div.innerHTML = "";
+	textT_div.innerHTML = "";
+	var text = document.getElementById("text");
+	text.style.top ="27%";
+	text.style.left = "39%";
+	text.style.marginLeft = "-150px";
+	text.style.marginTop = "20px";	//초기화
 }
 
 function editText(event) {
@@ -81,44 +87,67 @@ function editText(event) {
 		div.parentNode.removeChild(div);
 	}
 	
-	var array = ["폰트", "색상"];
-	var font_array = ["선택","나눔바른고딕", "a타이틀고딕1", "a타이틀고딕2", "a타이틀고딕5"];
+	var array = ["폰트", "위치", "색상"];
+	var font_array = ["선택","나눔바른고딕", "궁서", "a타이틀고딕2", "a타이틀고딕5"];
+	var lo_array = ["상", "하", "좌", "우"];
+	
 	var div1 = document.createElement("div");
 	var ul=document.createElement("ul");
 	var form = document.createElement('form');
 	var select = document.createElement('select');
+	var lo_select = document.createElement('select');
 	var input = document.createElement("input");
+	var radio = document.createElement("input");
+	var radio2 = document.createElement("input");
 
 	div1.setAttribute("id", "listTO");
 	ul.setAttribute("id", "newulT");
 	form.setAttribute("id", "select_form");
 	select.setAttribute("id", "select");
+	select.setAttribute("onchange", "changeFont()");
 	input.setAttribute("id", "color_input");
+	input.setAttribute("onchange", "changeColor()");
 	input.setAttribute("type", "color");
-
+	lo_select.setAttribute("id", "lo_select");
+	lo_select.setAttribute("onchange", "changeLocation()");
+	radio.setAttribute("type", "checkbox");
+	radio.setAttribute("id", "lo_radio");
+	radio.setAttribute("name", "choose");
+	radio2.setAttribute("type", "checkbox");
+	radio2.setAttribute("id", "lo_radio2");
+	radio2.setAttribute("name", "choose");
 	
 	div1.innerHTML = "Text Option";
 	a2.appendChild(div1);
 	a2.appendChild(ul);
 	select.style.display = "none";
+	lo_select.style.display = "none";
+	
 	for(var j=0; j<font_array.length; j++){
 		var option = document.createElement('option');
 		select.appendChild(option);
 		option.innerHTML = option.innerHTML + font_array[j];
 	}
+	for(var j=0; j<lo_array.length; j++){
+		var option = document.createElement('option');
+		lo_select.appendChild(option);
+		option.innerHTML = option.innerHTML + lo_array[j];
+	}
+	
 	
 	for (var j = 0; j<array.length; j++){
 	    var li=document.createElement('li');
 
 	    if(j==0)	li.setAttribute("id", "font_li");; 
-	    if(j==1)	li.setAttribute("id", "color_li");
+	    if(j==1)	li.setAttribute("id", "lo_li");
+	    if(j==2)	li.setAttribute("id", "color_li");
 	    
 	    ul.appendChild(li);
 	    li.innerHTML=li.innerHTML + array[j];
-
+	    
 		if(j == 0) {
-			var color = document.getElementById("#color_li");
-			ul.insertBefore(select, color);
+			var lo = document.getElementById("#lo_li");
+			ul.insertBefore(select, lo);
 	    	$("#font_li").click(function() {  
 	   			if($("#select").is(":visible")){
 	   				  $("#select").slideUp();
@@ -126,21 +155,106 @@ function editText(event) {
 	   			else{	
 	   				$("#select").slideDown();
 	   			}});
+	    	
+	    	
 		}
-	    if(j == 1) {
-	    	color_li.appendChild(input);
+	    if(j==1){
+	    	var color = document.getElementById("#color_li");
+	    	var lo_radio2 = document.getElementById("#lo_radio2");
+	    	ul.insertBefore(radio, color);
+	    	var label = document.createElement("label");
+
+	    	var label2 = document.createElement("label");
+	    	ul.insertBefore(label, lo_radio2);
+
+			ul.insertBefore(radio2, color);
+			ul.insertBefore(label2, color);
+			
+	    	label.innerHTML = label.innerHTML + "10자";
+	    	label2.innerHTML = label2.innerHTML + "30자";
+	          ul.insertBefore(lo_select, color);
+	    	$("#lo_li").click(function() {  
+	   			if($("#lo_select").is(":visible")){
+	   				  $("#lo_select").slideUp();
+	   			}
+	   			else{	
+	   				$("#lo_select").slideDown();
+	   			}});
+
 	    }
-		i++;
+	    if(j == 2) {
+	    	li.appendChild(input);
+	    }
 		
 	}
 }
 
-function fontColor() {
-	//var font = document.getElementById("");
-	
+function changeFont() {
+	var val = $("#select option:selected").val();
+	var text = document.getElementById("textarea10");
+	var textT = document.getElementById("textarea");
+//	console.log(val);
+	if(text !== null){
+		text.style.fontFamily = val;
+	}
+	if(textT !== null){
+		textT.style.fontFamily = val;
 
+	}
 }
-
+function changeColor(){
+	var color2 = document.getElementById('color_input').value;
+	var text = document.getElementById("textarea10");
+	var textT = document.getElementById("textarea");
+	if(text !== null){
+		text.style.color = color2;
+	}
+	if(textT !== null){
+		textT.style.color = color2;
+	}	
+}
+function changeLocation(){
+	var val = $("#lo_select option:selected").val();
+	console.log(val);
+	var text = document.getElementById("text");
+	var textarea10 = document.getElementById("textarea10");
+	if(val == "상"){
+		textarea10.style.width = "300px";
+		textarea10.style.height = "40px";
+		text.style.width = "300px";
+		text.style.height = "40px";
+		text.style.top = "27%"; 
+		text.style.left = "39%";
+		text.style.marginLeft = "-150px";
+	}
+	else if(val == "하"){
+		textarea10.style.width = "300px";
+		textarea10.style.height = "40px";
+		text.style.width = "300px";
+		text.style.height = "40px";
+		text.style.top = "73%"; 
+		text.style.left = "39%";
+		text.style.marginLeft = "-150px";
+	}
+	else if(val == "좌"){
+		textarea10.style.width = "40px";
+		textarea10.style.height = "300px";
+		text.style.width = "40px";
+		text.style.height = "300px";
+		text.style.top = "35%";
+		text.style.left = "50%";
+		text.style.marginLeft= "-350px";
+	}
+	else if(val == "우"){
+		textarea10.style.width = "40px";
+		textarea10.style.height = "300px";
+		text.style.width = "40px";
+		text.style.height = "300px";
+		text.style.top = "35%";
+		text.style.left = "50%";
+		text.style.marginLeft = "20px";
+	}
+}
 function addText10() {
 	var text_form = document.getElementById("text_form");
 	if(text_form !== null) {
@@ -148,7 +262,7 @@ function addText10() {
 	}
 	var str;
 	str = text_form.innerHTML;
-	str += "<input type = 'text' placeholder='Sample Text' maxlength='10' id = '" + count + "'\"style =  \"z-index : 3; \">"; 
+	str += "<textarea id='textarea10' rows='1' cols='10' wrap = 'hard' placeholder='Sample Text' maxlength='10' style =  \"z-index : 3; resize : none\">"; 
 	text_form.innerHTML = str;
 	s.push("count");
 	count++;
@@ -161,7 +275,7 @@ function addText30() {
 	}
 	var str;
 	str = div1.innerHTML;
-	str += "<textarea id='textarea' rows ='6' cols='5' wrap = 'hard' placeholder='Sample Text' maxlength='30' \"style =  \"z-index : 4; \"></textarea>"; 
+	str += "<textarea id='textarea' rows ='6' cols='5' wrap = 'hard' placeholder='Sample Text' maxlength='30' style =  \"z-index : 4; resize : none\"></textarea>"; 
 	div1.innerHTML = str;
 	s.push("textT");
 }
