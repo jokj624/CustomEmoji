@@ -10,89 +10,45 @@
 <script type="text/javascript" src="customEmoji.js"></script>
  <link href="customEmoji.css" type="text/css" rel="stylesheet">
 </head>
-<body>
-
-<div class = "box">
+<body style = 'background-color : #2b2b2b'>
+<br/>
+<div class = "box" >
     <div class = "chat">
       <div id="msg"></div>
-
           <div class = "send">
                 <div class = "input">
                   <div id="input_box" contenteditable="true"></div>
                 </div>
-
                 <div class = "emoji">
-                  <img class="emoji_pickup" id="emoji_pickup_before" src="img/emoji/1f642.png" style="width: 40;, ">
+                  <img class="emoji_pickup" id="emoji_pickup_before" src="img/emoji/1f642.png" style="width: 40; ">
                   <img class="emoji_pickup" id="emoji_pickup_after" src="img/emoji/1f600.png">
-
-                  <div id="emoji_popup">
+                  </div>
+				<div id="emoji_popup" style ="z-index : 1">
                     <div id="emoji_navigator">
-                      <a href="#people"><img style="margin-left: 6px" class="navigator" id="nav_people" src="img/emoji/nav_people.png" /></a>
+                      <a href="#people"><img style="margin-left: 6px" class="navigator" id="nav_people" src="img/대학일기2.png" /></a>
                     </div>
                     <!-- emoji popup div start -->
-                    <div id="people"><h5>People</h5></div>
-                    <img class="emoji_list" id="1f644" src="img/emoji/1f644.png" />
-                    <img class="emoji_list" id="1f643" src="img/emoji/1f643.png" />
-                    <img class="emoji_list" id="1f642" src="img/emoji/1f642.png" />
-                    <img class="emoji_list" id="1f641" src="img/emoji/1f641.png" />
-                    <img class="emoji_list" id="1f640" src="img/emoji/1f640.png" />
-                    <img class="emoji_list" id="1f639" src="img/emoji/1f639.png" />
-                    <img class="emoji_list" id="1f638" src="img/emoji/1f638.png" />
-                    <img class="emoji_list" id="1f637" src="img/emoji/1f637.png" />
-                    <img class="emoji_list" id="1f636" src="img/emoji/1f636.png" />
-                    <img class="emoji_list" id="1f635" src="img/emoji/1f635.png" />
-                    <img class="emoji_list" id="1f634" src="img/emoji/1f634.png" />
-                    <img class="emoji_list" id="1f633" src="img/emoji/1f633.png" />
-                    <img class="emoji_list" id="1f632" src="img/emoji/1f632.png" />
-                    <img class="emoji_list" id="1f631" src="img/emoji/1f631.png" />
-                    <img class="emoji_list" id="1f630" src="img/emoji/1f630.png" />
-                    <img class="emoji_list" id="1f629" src="img/emoji/1f629.png" />
-                    <img class="emoji_list" id="1f628" src="img/emoji/1f628.png" />
-                    <img class="emoji_list" id="1f627" src="img/emoji/1f627.png" />
-                    <img class="emoji_list" id="1f626" src="img/emoji/1f626.png" />
-                    <img class="emoji_list" id="1f625" src="img/emoji/1f625.png" />
-                    <img class="emoji_list" id="1f624" src="img/emoji/1f624.png" />
-                    <img class="emoji_list" id="1f623" src="img/emoji/1f623.png" />
-                    <img class="emoji_list" id="1f622" src="img/emoji/1f622.png" />
-                    <img class="emoji_list" id="1f621" src="img/emoji/1f621.png" />
-                    <img class="emoji_list" id="1f620" src="img/emoji/1f620.png" />
-                    <img class="emoji_list" id="1f619" src="img/emoji/1f619.png" />
-                    <img class="emoji_list" id="1f618" src="img/emoji/1f618.png" />
-                    <img class="emoji_list" id="1f617" src="img/emoji/1f617.png" />
-                    <img class="emoji_list" id="1f616" src="img/emoji/1f616.png" />
-                    <img class="emoji_list" id="1f615" src="img/emoji/1f615.png" />
-                    <img class="emoji_list" id="1f614" src="img/emoji/1f614.png" />
-                    <img class="emoji_list" id="1f613" src="img/emoji/1f613.png" />
-                    <img class="emoji_list" id="1f612" src="img/emoji/1f612.png" />
-                    <img class="emoji_list" id="1f611" src="img/emoji/1f611.png" />
-                    <img class="emoji_list" id="1f610" src="img/emoji/1f610.png" />
-                    <img class="emoji_list" id="1f609" src="img/emoji/1f609.png" />
-                    <img class="emoji_list" id="1f608" src="img/emoji/1f608.png" />
-                    <img class="emoji_list" id="1f607" src="img/emoji/1f607.png" />
-                    <img class="emoji_list" id="1f606" src="img/emoji/1f606.png" />
-                    <img class="emoji_list" id="1f605" src="img/emoji/1f605.png" />
-                    <img class="emoji_list" id="1f604" src="img/emoji/1f604.png" />
-                    <img class="emoji_list" id="1f603" src="img/emoji/1f603.png" />
-                    <img class="emoji_list" id="1f602" src="img/emoji/1f602.png" />
-                    <img class="emoji_list" id="1f601" src="img/emoji/1f601.png" />
-                    <img class="emoji_list" id="1f600" src="img/emoji/1f600.png" />
-                    <img class="emoji_list" id="1f929" src="img/emoji/1f929.png" />
-                    <img class="emoji_list" id="1f928" src="img/emoji/1f928.png" />
-                    <img class="emoji_list" id="1f927" src="img/emoji/1f927.png" />
-                    <img class="emoji_list" id="1f925" src="img/emoji/1f925.png" />
-                    <img class="emoji_list" id="1f924" src="img/emoji/1f924.png" />
-                    <img class="emoji_list" id="1f923" src="img/emoji/1f923.png" />
-                    <img class="emoji_list" id="1f922" src="img/emoji/1f922.png" />
-                    <img class="emoji_list" id="1f920" src="img/emoji/1f920.png" />
-                    <img class="emoji_list" id="1f917" src="img/emoji/1f917.png" />
-                    <img class="emoji_list" id="1f915" src="img/emoji/1f915.png" />
-                    <img class="emoji_list" id="1f914" src="img/emoji/1f914.png" />
-                    <img class="emoji_list" id="1f913" src="img/emoji/1f913.png" />
-                    <img class="emoji_list" id="1f912" src="img/emoji/1f912.png" />
-                    <img class="emoji_list" id="1f911" src="img/emoji/1f911.png" />
-                    <img class="emoji_list" id="1f910" src="img/emoji/1f910.png" />
-
+                    <div id="people"><h5>대학일기</h5></div>
+                    <img class="emoji_list" id="이모티콘_대학일기" src="img/대학일기1.png" />
+                    <img class="emoji_list" id="대학일기2" src="img/대학일기2.png" />
+                    <img class="emoji_list" id="대학일기3" src="img/대학일기3.png" />
+                    <img class="emoji_list" id="대학일기4" src="img/대학일기4.png" />
+                    <img class="emoji_list" id="대학일기5" src="img/대학일기5.png" />
+                    <img class="emoji_list" id="대학일기6" src="img/대학일기6.png" />
+                    <img class="emoji_list" id="대학일기7" src="img/대학일기7.png" />
+                    <img class="emoji_list" id="대학일기8" src="img/대학일기8.png" />
+                    <img class="emoji_list" id="대학일기9" src="img/대학일기9.png" />
+                    <img class="emoji_list" id="대학일기10" src="img/대학일기10.png" /> </div>
+	
                     <!-- emoji popup div end -->
+    
+                  <div id="custom_emoji" style ="z-index : 2">
+                  	<div id = "menu">
+                  		<div id = "menu_bnt">
+                  			<button class = "button">텍스트 삽입</button>
+                  			<button class = "button">보내기</button>
+                  		</div>
+                  	</div>
                   </div>
               </div>
         </div>

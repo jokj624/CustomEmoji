@@ -54,10 +54,34 @@ $(document).on("click",".emoji_pickup",function(){
 
 }).on("click", "#emoji_popup", function(){
 	$("#emoji_popup").css({"display":"none"});
-
 });
 
 //emoji_pick
+$(document).on("click",".emoji_list", function(e) {
+	var customemo_width = $("#custom_emoji").width();
+	var customemo_height = $('#custom_emoji').height();
+	
+	var position = $('.input').position();
+	var boxsize = $('.input').height();
+	$('#custom_emoji').css("left",position.left);
+  	$('#custom_emoji').css("top",position.top-customemo_height);
+  	$("#custom_emoji").css("background-color","#FFFFFF")
+  	$('#custom_emoji').css("display","block");
+	
+	var emoji_id = $(this).attr('id');
+  	var imgtag = '<img id = "emo" style="width:120px; height:120px; margin-top:5%;" src="img//' + emoji_id + '.png">';
+  	$('#custom_emoji').append(imgtag);
+  	$('#custom_emoji').focus();
+
+}).on("keyup", "#input_box", function(){
+	if(event.keyCode === 13){
+		$("#custom_emoji").css({"display":"none"});
+		$("#emo").detach();
+	}
+});
+
+
+
 $(document).on("click",".emoji_list", function(e) {
 
   var input_area_default = $('#input_box').html()
@@ -65,10 +89,11 @@ $(document).on("click",".emoji_list", function(e) {
     $('#input_box').html('')
   }
   var emoji_id = $(this).attr('id');
-  var imgtag = '<img style="width:100px; height:100px" src="img/emoji/' + emoji_id + '.png">';
+  var imgtag = '<img style="width:120px; height:120px" src="img/' + emoji_id + '.png">';
   $('#input_box').append(imgtag+'<br/>');
   $('#input_box').focus();
 });
+
 
 
 // Enter 키를 입력할 경우 전송처리
@@ -76,14 +101,11 @@ $(document).on("keyup","#input_box",function() {
 
   var inputarea = $('#input_box');
   inputarea.scrollTop(inputarea[0].scrollHeight);
-
   if (event.keyCode === 13) {
     var input_area_default = $('#input_box').html();
     $('#input_box').html('');
     $('#msg').append(input_area_default);
     var textarea = $('#msg');
     textarea.scrollTop(textarea[0].scrollHeight);
- }
+  }
 });
-
-

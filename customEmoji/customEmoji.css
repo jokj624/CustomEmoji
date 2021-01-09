@@ -1,50 +1,45 @@
 @charset "utf-8";
 
-
 #msg{
-  border: 1px #CECEF6 solid;
-  width: 500px;
+  border: 1px white solid;
+  width: 400px;
   height: 650px;
-  background-color : skyblue;
+  background-color : #525252;
   /*margin-left: 50px;*/
-  font-size : 24px;
+  font-size : 20px;
   overflow: auto;
-  margin: auto
+  margin: auto;
+  color : white;
+  text-align : right;
 }
 
 #input_box{
-  border: 1px #CECEF6 solid;
-  width: 450px;
+  border: 1px white solid;
+  width: 350px;
   height: 40px;
   overflow: auto;
   margin-top: 8px;
   padding-left: 5px;
-  padding-top: 8px
+  padding-top: 8px;
+  color : white;
 }
 .input{
-	width: 450px;
+	width: 350px;
 	height : 50px;
 	display: inline-block
 }
 
 .send {
-	width: 500px;
+	width: 400px;
 	height : 50px;
-	margin: auto
-}
-
-#input_box:focus{
-  outline: none;
-  margin-top: 5px;
-  margin-left: 5px;
-  padding-left: 3px;
-  padding-top: 8px
+	margin: auto;
+	background-color : #525252;
 }
 
 .emoji{
 	width: 32px;
 	display: inline-block;
-	margin : 5px
+	margin : 5px;
 }
 .emoji_pickup{
   cursor: pointer;
@@ -64,20 +59,48 @@
 
 #emoji_popup{
   display: none;
-  position: absolute;
-  border: 1px #CECEF6 solid;
-  width: 500px;
+  margin-top : -250px;
+  border: 1px #ffcd05 solid;
+  width: 400px;
   height: 200px;
-  overflow: auto
+  overflow: auto;
+}
+
+#custom_emoji{
+  display: none;
+  margin-top : -250px;
+  border: 1px #ffcd05 solid;
+  width: 400px;
+  height: 200px;
+  overflow: auto;
+}
+#menu {
+	display : inline-block;
+}
+.button {
+	margin-left : 5px;
+	display : block;
+	border : 1px solid black;
+	color : black;
+	background : none;
+	font-size : 1.2em;
+	margin-top : 7px;
+	
+}
+
+#emo {
+	position: absolute;
+	margin-top : 40px;
+	margin-left : 25px;
 }
 
 #emoji_navigator{
-  border-bottom: 1px #CECEF6 solid;
+  border-bottom: 1px #ffcd05 solid;
 }
 
 #emoji_tooltip{
   display: none;
-  border: 1px #CECEF6 solid
+  border: 1px #ffcd05 solid
 }
 
 .navigator{
@@ -100,16 +123,17 @@
   border: 1px #FFFFFF solid;
   cursor: pointer;
   margin: 1px;
-  width: 32px;
-  height: 32px
+  width: 120px;
+  height: 120px;
 }
+
 
 .emoji_list:hover{
   border: 1px #CECEF6 solid;
   cursor: pointer;
   margin: 1px;
-  width: 32px;
-  height: 32px
+  width: 120px;
+  height: 120px;
 }
 
 /* Scroll Bar */
