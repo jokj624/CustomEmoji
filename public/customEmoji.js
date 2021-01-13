@@ -1,30 +1,8 @@
 
 var emoji_id;
 
-
-/*function readTextFile(file, callback) {
-    var rawFile = new XMLHttpRequest();
-    rawFile.overrideMimeType("application/json");
-    rawFile.open("GET", file, true);
-    rawFile.onreadystatechange = function() {
-        if (rawFile.readyState === 4 && rawFile.status == "200") {
-            callback(rawFile.responseText);
-        }
-    }
-    rawFile.send(null);
-}*/
 $(function(){   
-/*    emoji_id = $("#emoji_navigator > a").attr("id");     
-    console.log(emoji_id);
-    var str = "C:\\Users\\SeaOne\\Downloads\\"  + emoji_id + ".json";  
-    console.log(str);
 
-      //usage:
-      readTextFile("C:\\Users\\SeaOne\\Downloads\\campuslife.json", function(text){
-          var data = JSON.parse(text);
-          console.log(data);
-      });
-*/
 // 입력창에 아무 입력도 없을 경우 'Add comment'를 기본으로 세팅
  var input_area_default = $('#input_box').html();
 
