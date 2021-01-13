@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8"> 
+<title>Chatting_Web</title>
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <!--<script type="text/javascript" src="http://requirejs.org/docs/release/2.3.2/minified/require.js"></script> -->
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="http://localhost:3000/customEmoji.js"></script>
+  <link href="http://localhost:3000/customEmoji.css" type="text/css" rel="stylesheet"/>
+ <script src="/socket.io/socket.io.js"></script>
+ <script>
+  const socket = io();
+</script>
+</head>
+<body style = 'background-color : #2b2b2b'>
+<br/>
+<div class = "box" >
+    <div class = "chat">
+      <div id="msg"></div>
+          <div class = "send">
+                <div class = "input">
+                  <div id="input_box" contenteditable="true"></div>
+                </div>
+                <div class = "emoji">
+                  <img class="emoji_pickup" id="emoji_pickup_before" src="img/1f642.png" style="width: 40; ">
+                  <img class="emoji_pickup" id="emoji_pickup_after" src="img/1f600.png">
+                  </div>
+            <div id="emoji_popup" style ="z-index : 1">
+                    <div id="emoji_navigator"> 
+                      <a href="#people" id="campus"><img style="margin-left: 6px" class="navigator" id="nav_people" src="img/campus2.png" /></a>
+                    </div>
+                    <!-- emoji popup div start -->
+                    <div id="people"><h5>대학일기</h5></div>
+                    <img class="emoji_list" id="campus1" src="img/campus1.png" />
+                    <img class="emoji_list" id="campus2" src="img/campus2.png" />
+                    <img class="emoji_list" id="campus3" src="img/campus3.png" />
+                    <img class="emoji_list" id="campus4" src="img/campus4.png" />
+                    <img class="emoji_list" id="campus5" src="img/campus5.png" />
+                    <img class="emoji_list" id="campus6" src="img/campus6.png" />
+                    <img class="emoji_list" id="campus7" src="img/campus7.png" />
+                    <img class="emoji_list" id="campus8" src="img/campus8.png" />
+                    <img class="emoji_list" id="campus9" src="img/campus9.png" />
+                    <img class="emoji_list" id="campus10" src="img/campus10.png" /> </div>
+   
+                    <!-- emoji popup div end -->
+    
+                  <div id="custom_emoji" style ="z-index : 2">
+                     <div id = "menu">
+                        <div id = "menu_bnt">
+                           <button class = "button">텍스트 삽입</button>
+                           <button class = "button">보내기</button>
+                        </div>
+                     </div>
+                  </div>
+              </div>
+        </div>
+  </div>
+</div>
+</body>
+</html>
