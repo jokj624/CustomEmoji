@@ -10,88 +10,121 @@
   overflow: auto;
   margin: auto;
   color : white;
-  text-align : right;
+ /*text-align : right;*/
 }
-
-#input_box{
+.msgLine {
+  margin: 15px;
+}
+.msgBox {
+  border: 1px solid #f5bc42;
+  background: #f5bc42;
+  padding: 2px 5px;
+  color : black;
+  font-family : "a타이틀고딕2";
+  font-size : 0.9em;
+  border-radius: 10px;
+}
+/*
+#nav_emo {
+  text-align : center;
+}*/
+/*
+.input{
+   width: 300px;
+  height : 0;
+   display: inline;
+}
+*/
+input[type=text]{
   border: 1px white solid;
-  width: 350px;
-  height: 40px;
+  width: 280px;
+  height : 33px;
   overflow: auto;
-  margin-top: 8px;
+  margin : 8px;
   padding-left: 5px;
   padding-top: 8px;
-  color : white;
-}
-.input{
-	width: 350px;
-	height : 50px;
-	display: inline-block
 }
 
 .send {
-	width: 400px;
-	height : 50px;
-	margin: auto;
-	background-color : #525252;
+   width: 400px;
+   height : 50px;
+   margin: auto;
+   background-color : #525252;
 }
-
+.send > form {
+  width : 400px;
+  height : 50px;
+  display:inline-block;
+  position : absolute;
+}
+#sendmsg{
+  /*width:50px;
+  height : 30px;*/
+  right : 10px;
+  top : 10px;
+  position : absolute;
+  display:inline-block;
+  /*margin-top :5px;*/
+ /* border: 1px white solid;*/
+}
 .emoji{
-	width: 32px;
-	display: inline-block;
-	margin : 5px;
+  width: 32px;
+  position : absolute;
+  display: inline-block;
+  top : 10px;
+  right : 70px;
+  /*margin-left : 5px;
+  margin-right : 5px;*/
 }
 .emoji_pickup{
   cursor: pointer;
-  display : block;
+  display : inline-block;
 }
 
 #emoji_pickup_before{
-  margin-top: 5px;
   margin-right: 10px
 }
 
 #emoji_pickup_after{
-  margin-top: 5px;
   margin-right: 10px;
   display: none
 }
 
 #emoji_popup{
   display: none;
-  margin-top : -250px;
   border: 1px #ffcd05 solid;
   width: 400px;
   height: 200px;
+  position : absolute;
   overflow: auto;
 }
 
 #custom_emoji{
   display: none;
-  margin-top : -250px;
   border: 1px #ffcd05 solid;
   width: 400px;
   height: 200px;
+  position : absolute;
   overflow: auto;
 }
 #menu {
-	display : inline-block;
+   display : inline-block;
 }
 .button {
-	margin-left : 5px;
-	display : block;
-	border : 1px solid black;
-	color : black;
-	background : none;
-	font-size : 1.2em;
-	margin-top : 7px;
-	
+   margin-left : 5px;
+   display : block;
+   border : 1px solid black;
+   color : black;
+   background : none;
+   font-size : 1.2em;
+   margin-top : 7px;
+   
 }
 
 #emo {
-	position: absolute;
-	margin-top : 40px;
-	margin-left : 25px;
+   position: absolute;
+   margin-top : 40px;
+   margin-left : 25px;
 }
 
 #emoji_navigator{
@@ -135,7 +168,10 @@
   width: 120px;
   height: 120px;
 }
-
+.btn-warning{
+  color : #1f1c1c;
+  font-family: "a타이틀고딕5";
+}
 /* Scroll Bar */
 
 /* width */

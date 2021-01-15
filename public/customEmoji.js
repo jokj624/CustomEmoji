@@ -1,6 +1,6 @@
 
 var emoji_id;
-
+/*
 $(function(){   
 
 // 입력창에 아무 입력도 없을 경우 'Add comment'를 기본으로 세팅
@@ -11,14 +11,14 @@ $(function(){
    $('#input_box').html(default_text)
  }
 });
-
+*/
 //esc 누르면 popup div가 사라짐
 $(document).on("keyup",function() {
   if (event.keyCode === 27 || event.keyCode === 13) {
     $("#emoji_popup").css({"display":"none"});
       }
 });
-
+/*
 //입력을 시작하면 기본 세팅인 'Add comment'를 제거
 $(document).on("focus","#input_box",function() {
 
@@ -29,15 +29,15 @@ $(document).on("focus","#input_box",function() {
   }
 
 });
-
+*/
 //이모지 버튼에 마우스 올리면 표정 바뀜
 $(document).on("mouseenter",".emoji_pickup",function() {
 
     $('#emoji_pickup_before').css("display","none");
-    $('#emoji_pickup_after').css("display","block");
+    $('#emoji_pickup_after').css("display","inline-block");
   }).on("mouseleave",".emoji_pickup",function() {
     $('#emoji_pickup_after').css("display","none");
-    $('#emoji_pickup_before').css("display","block");
+    $('#emoji_pickup_before').css("display","inline-block");
   });
 
 //이모지 버튼 클릭시 이모지 목록 popup
@@ -45,11 +45,13 @@ $(document).on("click",".emoji_pickup",function(){
 
   // popup div의 size를 가져와서 위치 선정에 활용
   var popupdiv_width = $('#emoji_popup').width();
-  var popupdiv_height = $('#emoji_popup').height();
+  var popupdiv_height = $('#emoji_popup').height(); //200px
 
   // popup div의 위치를 설정
-  var position = $('.input').position();
-  var boxsize = $('.input').height();
+  var position = $('#input_box').position();
+  console.log(position.top); //670
+  console.log(position.left);
+  var boxsize = $('.send').height();
   $('#emoji_popup').css("left",position.left);
   $('#emoji_popup').css("top",position.top-popupdiv_height);
   $("#emoji_popup").css("background-color","#FFFFFF")
@@ -64,8 +66,8 @@ $(document).on("click",".emoji_list", function(e) {
    var customemo_width = $("#custom_emoji").width();
    var customemo_height = $('#custom_emoji').height();
    
-   var position = $('.input').position();
-   var boxsize = $('.input').height();
+   var position = $('#input_box').position();
+   var boxsize = $('#input_box').height();
    $('#custom_emoji').css("left",position.left);
      $('#custom_emoji').css("top",position.top-customemo_height);
      $("#custom_emoji").css("background-color","#FFFFFF")
@@ -98,7 +100,7 @@ $(document).on("click",".emoji_list", function(e) {
 });
 
 
-
+/*
 // Enter 키를 입력할 경우 전송처리
 $(document).on("keyup","#input_box",function() {
 
@@ -111,4 +113,40 @@ $(document).on("keyup","#input_box",function() {
     var textarea = $('#msg');
     textarea.scrollTop(textarea[0].scrollHeight);
   }
+});*/
+
+var chatView = document.getElementById('msg');
+var chatForm = document.getElementById('chatform');
+ 
+chatForm.addEventListener('submit', function() {
+  var msgText = $('#input_box');
+ 
+  if (msgText.val() == '') {
+      return;
+  } else {
+    socket.emit('SEND', msgText.val());
+      var msgLine = $('<div class="msgLine">');
+      var msgBox = $('<div class="msgBox">');
+ 
+      msgBox.append(msgText.val());
+      msgBox.css('display', 'inline-block');
+      msgLine.css('text-align', 'right');
+      msgLine.append(msgBox);
+ 
+      $('#msg').append(msgLine);
+      msgText.val('');
+      chatView.scrollTop = chatView.scrollHeight;
+    }
+  });
+  socket.on('SEND', function(msg) {
+    var msgLine = $('<div class="msgLine">');
+    var msgBox = $('<div class="msgBox">');
+            
+    msgBox.append(msg);
+    msgBox.css('display', 'inline-block');
+
+    msgLine.append(msgBox);
+    $('#msg').append(msgLine);
+
+    chatView.scrollTop = chatView.scrollHeight;
 });
