@@ -15,9 +15,18 @@
 .msgLine {
   margin: 15px;
 }
-.msgBox {
+.me{
   border: 1px solid #f5bc42;
   background: #f5bc42;
+  padding: 2px 5px;
+  color : black;
+  font-family : "a타이틀고딕2";
+  font-size : 0.9em;
+  border-radius: 10px;
+}
+.msgBox {
+  border: 1px solid #40a6f5;
+  background: #40a6f5;
   padding: 2px 5px;
   color : black;
   font-family : "a타이틀고딕2";
@@ -121,12 +130,9 @@ input[type=text]{
    
 }
 
-#emo {
-   position: absolute;
-   margin-top : 40px;
-   margin-left : 25px;
+#emoji_div{
+  display: inline-block;
 }
-
 #emoji_navigator{
   border-bottom: 1px #ffcd05 solid;
 }

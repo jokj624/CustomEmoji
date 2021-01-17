@@ -1,17 +1,9 @@
 
 var emoji_id;
-/*
-$(function(){   
 
-// 입력창에 아무 입력도 없을 경우 'Add comment'를 기본으로 세팅
- var input_area_default = $('#input_box').html();
-
- if(input_area_default == ''){
-   var default_text = 'Add Text';
-   $('#input_box').html(default_text)
- }
+$.getJSON("./22.json", function(data){
+  console.log(data);
 });
-*/
 //esc 누르면 popup div가 사라짐
 $(document).on("keyup",function() {
   if (event.keyCode === 27 || event.keyCode === 13) {
@@ -75,7 +67,7 @@ $(document).on("click",".emoji_list", function(e) {
    
    var emoji_id = $(this).attr('id');
      var imgtag = '<img id = "emo" style="width:120px; height:120px;" src="img//' + emoji_id + '.png">';
-     $('#custom_emoji').append(imgtag);
+     $('#emoji_div').append(imgtag);
      $('#custom_emoji').focus();
 
 }).on("keyup", "#input_box", function(){
@@ -120,13 +112,13 @@ var chatForm = document.getElementById('chatform');
  
 chatForm.addEventListener('submit', function() {
   var msgText = $('#input_box');
- 
+  
   if (msgText.val() == '') {
       return;
   } else {
     socket.emit('SEND', msgText.val());
       var msgLine = $('<div class="msgLine">');
-      var msgBox = $('<div class="msgBox">');
+      var msgBox = $('<div class="me">');
  
       msgBox.append(msgText.val());
       msgBox.css('display', 'inline-block');
@@ -149,4 +141,16 @@ chatForm.addEventListener('submit', function() {
     $('#msg').append(msgLine);
 
     chatView.scrollTop = chatView.scrollHeight;
+});
+
+$(function(){          
+  $("#save").click(function() { 
+       html2canvas($("#emoji_div"), {
+           onrendered: function(canvas) {
+               canvas.toBlob(function(blob) {
+                   saveAs(blob, 'image.png');
+               });
+           }
+       });
+   });
 });

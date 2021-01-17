@@ -21,7 +21,7 @@ io.on('connection', function(socket) {
             if (item != socket) {
                 item.emit('SEND', msg);
             }
-        });
+        }); 
     });
  
     socket.on('disconnect', function() {

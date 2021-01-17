@@ -1,0 +1,15 @@
+{
+	"0": {
+		"name": "1",
+		"ten": {
+			"exist": 1,
+			"location": "상"
+		},
+		"thirty": {
+			"exist": 0,
+			"location": "없음"
+		},
+		"font": "a타이틀고딕2",
+		"color": ""
+	}
+}

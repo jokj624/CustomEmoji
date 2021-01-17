@@ -6,6 +6,9 @@
   <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
   <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+  <script src = "https://cdn.rawgit.com/eligrey/FileSaver.js/5ed507ef8aa53d8ecfea96d96bc7214cd2476fd2/FileSaver.min.js"></script>
+  <!--<script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>-->
+  <script src = "https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.5.0-beta4/html2canvas.js"></script>
   <link href="http://localhost:3000/customEmoji.css" type="text/css" rel="stylesheet"/>
  <script src="/socket.io/socket.io.js"></script>
  <script>const socket = io();</script>
@@ -48,8 +51,11 @@
           <div id = "menu">
             <div id = "menu_bnt">
               <button class = "button">텍스트 삽입</button>
-              <button class = "button">보내기</button>
+              <button class = "button" id = "save">보내기</button>
             </div>
+          </div>
+          <div id = "emoji_div" style="filter:alpha(opacity=0)">
+            <span style="writing-mode: tb-rl;">hello world</span> <!--세로쓰기 테스트-->
           </div>
         </div>
       
