@@ -499,10 +499,10 @@ function saveFunction(event){
 	}
 }
 function saveEmoji(event){	//Emoji name 매개변수로 받아와야함
-	//이모티콘 마다 객체에 index로 접근해야함  여긴데 495번줄 ㅋㅋㅋㅋㅋㅋ
+	//이모티콘 마다 객체에 index로 접근해야함  
 	var text_color;
 	var emo_name = document.getElementById('emoji_name').value;
-	saveInfo[index].name = emo_name; 	// 이모티콘 name 어떻게 해야하지 ?    
+	saveInfo[index].name = emo_name; 	
 	if(document.getElementById('textarea10')){  //10자 사용 할 때
 		saveInfo[index].ten.exist = 1;
 		saveInfo[index].ten.location = location_check10;
@@ -525,14 +525,13 @@ function saveEmoji(event){	//Emoji name 매개변수로 받아와야함
 	if(document.getElementById('date')){
 		saveInfo[index].adddate = 1;
 	}*/
-//	saveInfo[index].font = $("#select option:selected").val();
 	saveInfo[index].font = font_check;
 	console.log(saveInfo[index].font);
 	saveInfo[index].color = text_color
 	index+=1;	//다음 이모티콘 저장 시 index + 1 되도록
 	location_check10 = "상"; 	//초기화
 	location_check30 = "우"; 	//초기화
-	font_check = "a타이틀고딕1";
+	font_check = "a타이틀고딕1"; //초기화
 	alert("저장 완료되었습니다.");
 }
 function saveJson(event){ 
@@ -560,7 +559,7 @@ var saveInfo = {}; 	 //객체 배열
 var imgcnt; //img 개수 카운트
 function generate(){
 	console.log(imgcnt);
-	for(var i = 0; i<imgcnt; i++){
+	for(var i = 0; i<imgcnt; i++){			
 		saveInfo[i] = 	{        
 				name : "",		//이모지 개별 name ex) 대학일기1     
 				ten : {
@@ -572,7 +571,7 @@ function generate(){
 					location : "우"
 				},
 				font : "a타이틀고딕1",
-				color : "",
+				color : "rgb(0, 0, 0)",
 			}; 
 		}
 	

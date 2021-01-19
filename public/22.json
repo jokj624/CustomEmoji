@@ -1,15 +1,41 @@
 {
 	"0": {
-		"name": "1",
+		"name": "campus1",
 		"ten": {
-			"exist": 1,
-			"location": "상"
+			"exist": 1,				
+			"location": "우"
 		},
 		"thirty": {
 			"exist": 0,
 			"location": "없음"
 		},
 		"font": "a타이틀고딕2",
+		"color": "rgb(0, 0, 0)"
+	},
+	"1": {
+		"name": "campus2",
+		"ten": {
+			"exist": 1,
+			"location": "하"
+		},
+		"thirty": {
+			"exist": 1,
+			"location": "우"
+		},
+		"font": "궁서",
 		"color": ""
+	},
+	"2": {
+		"name": "campus3",
+		"ten": {
+			"exist": 0,
+			"location": "없음"
+		},
+		"thirty": {
+			"exist": 1,
+			"location": "하"
+		},
+		"font": "a타이틀고딕2",
+		"color": "rgb(72, 37, 155)"
 	}
 }

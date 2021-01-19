@@ -1,8 +1,16 @@
 
 var emoji_id;
+var emoji_info = new Object(); 
+var pick_emoji = new Object();
+var lo_ten;
+var lo_thirty;
+var font;
+var color;
+var exist10; 
+var exist30; 
 
 $.getJSON("./22.json", function(data){
-  console.log(data);
+  emoji_info = data;
 });
 //esc 누르면 popup div가 사라짐
 $(document).on("keyup",function() {
@@ -10,18 +18,7 @@ $(document).on("keyup",function() {
     $("#emoji_popup").css({"display":"none"});
       }
 });
-/*
-//입력을 시작하면 기본 세팅인 'Add comment'를 제거
-$(document).on("focus","#input_box",function() {
 
-  var input_area_default = $('#input_box').html()
-
-  if(input_area_default == 'Add Text'){
-    $('#input_box').html('')
-  }
-
-});
-*/
 //이모지 버튼에 마우스 올리면 표정 바뀜
 $(document).on("mouseenter",".emoji_pickup",function() {
 
@@ -57,7 +54,7 @@ $(document).on("click",".emoji_pickup",function(){
 $(document).on("click",".emoji_list", function(e) {
    var customemo_width = $("#custom_emoji").width();
    var customemo_height = $('#custom_emoji').height();
-   
+   $('.button2').hide();
    var position = $('#input_box').position();
    var boxsize = $('#input_box').height();
    $('#custom_emoji').css("left",position.left);
@@ -70,14 +67,22 @@ $(document).on("click",".emoji_list", function(e) {
      $('#emoji_div').append(imgtag);
      $('#custom_emoji').focus();
 
+     var emoji_num = emoji_id.replace(/[^0-9]/g,'');  //emoji_id에서 숫자(인덱스)만 추출
+     console.log(emoji_num);
+     pick_emoji = emoji_info[emoji_num-1];  //해당 이모티콘 객체 저장
+     console.log(pick_emoji);
+   /*  if(pick_emoji["ten"]["exist"] == 1){
+        $('#text10').show();
+     }
+     if(pick_emoji["thirty"]["exist"] == 1){
+       $('#text30').show();
+    }*/
 }).on("keyup", "#input_box", function(){
    if(event.keyCode === 13){
       $("#custom_emoji").css({"display":"none"});
       $("#emo").detach();
    }
 });
-
-
 
 $(document).on("click",".emoji_list", function(e) {
 
@@ -91,22 +96,57 @@ $(document).on("click",".emoji_list", function(e) {
   $('#input_box').focus();
 });
 
+$(document).on("click","#add", function(e) {
+   var str = $('#input_box').val();
+   exist10 = pick_emoji["ten"]["exist"];
+   exist30 = pick_emoji["thirty"]["exist"];
+   font = pick_emoji["font"];
+   color = pick_emoji["color"];
+   if(str.length <=10){
+    if(exist10 == 1){
+      //10자 이내는 바로 10자에 넣음
+      add10(str);
+    }
+    else if(exist10 == 0 && exist30 == 1){
+      //30자 칸에다 넣어야 함
+    }
+   }
+   else{
+    if(exist30 == 1){
+      //30자 칸에 바로 넣기
+    }
+    else if(exit30 == 0 && exist10 == 1){
+      //10자로 잘라서 10자 칸에 넣기  
+    }
+   }
+});
 
-/*
-// Enter 키를 입력할 경우 전송처리
-$(document).on("keyup","#input_box",function() {
-
-  var inputarea = $('#input_box');
-  inputarea.scrollTop(inputarea[0].scrollHeight);
-  if (event.keyCode === 13) {
-    var input_area_default = $('#input_box').html();
-    $('#input_box').html('');
-    $('#msg').append(input_area_default);
-    var textarea = $('#msg');
-    textarea.scrollTop(textarea[0].scrollHeight);
+function add10(str){
+  //10자 텍스트 추가
+  lo_ten = pick_emoji["ten"]["location"];
+  $('#user_text').text(str);
+  $('#user_text').css('font-family', font);
+  $('#user_text').css('color', color);
+  
+  if(lo_ten == "상"){
+    $('#user_text').css('width', "250px");
+    $('#user_text').css('top', "38px");
   }
-});*/
-
+  else if(lo_ten == "하"){  
+    $('#user_text').css('width', "250px");
+    $('#user_text').css('bottom', "38px");
+  }
+  else if(lo_ten == "좌"){
+    $('#user_text').css('writing-mode', "tb-rl");
+    $('#user_text').css('height', "250px");
+    $('#user_text').css('left', "38px");
+  }
+  else if(lo_ten == "우"){
+    $('#user_text').css('writing-mode', "tb-rl");
+    $('#user_text').css('height', "250px");
+    $('#user_text').css('right', "38px");
+  }
+}
 var chatView = document.getElementById('msg');
 var chatForm = document.getElementById('chatform');
  
@@ -148,7 +188,15 @@ $(function(){
        html2canvas($("#emoji_div"), {
            onrendered: function(canvas) {
                canvas.toBlob(function(blob) {
-                   saveAs(blob, 'image.png');
+                var url = URL.createObjectURL(blob);
+                const img = document.createElement('img');
+                img.src = url;
+                img.onload = function() {
+                  //cleanup.
+                  URL.revokeObjectURL(this.src);
+                }
+                $('#msg').append(img);
+                 //  saveAs(blob, 'image.png');
                });
            }
        });

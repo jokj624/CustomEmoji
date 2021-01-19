@@ -103,7 +103,7 @@ input[type=text]{
   display: none;
   border: 1px #ffcd05 solid;
   width: 400px;
-  height: 200px;
+  height: 250px;
   position : absolute;
   overflow: auto;
 }
@@ -112,7 +112,7 @@ input[type=text]{
   display: none;
   border: 1px #ffcd05 solid;
   width: 400px;
-  height: 200px;
+  height: 250px;
   position : absolute;
   overflow: auto;
 }
@@ -125,13 +125,37 @@ input[type=text]{
    border : 1px solid black;
    color : black;
    background : none;
-   font-size : 1.2em;
+   font-size : 0.9em;
    margin-top : 7px;
-   
+}
+/*
+.button2 {
+  margin-left : 5px;
+  display : block;
+  border : 1px solid black;
+  color : black;
+  background : none;
+  font-size : 1.2em;
+  margin-top : 7px;
 }
 
+#addtext {
+  float : right;
+  right : 0%;
+  margin-right: 5px;
+}*/
 #emoji_div{
   display: inline-block;
+  position : absolute;
+  width : 250px;
+  height : 250px;
+  top: 0;
+  left : 75px;
+}
+#emoji_div > img{
+  position:absolute;
+  top : 65px;
+  left : 65px;
 }
 #emoji_navigator{
   border-bottom: 1px #ffcd05 solid;
@@ -177,6 +201,11 @@ input[type=text]{
 .btn-warning{
   color : #1f1c1c;
   font-family: "a타이틀고딕5";
+}
+#user_text{
+  font-size: 0.9em;
+  position : absolute;
+  text-align: center;
 }
 /* Scroll Bar */
 

@@ -50,13 +50,17 @@
         <div id="custom_emoji" style ="z-index : 2">
           <div id = "menu">
             <div id = "menu_bnt">
-              <button class = "button">텍스트 삽입</button>
-              <button class = "button" id = "save">보내기</button>
+              <button class = "button" id = "add" type = "button">텍스트 삽입</button>
+              <button class = "button" id = "save" type = "button">보내기</button>
             </div>
           </div>
-          <div id = "emoji_div" style="filter:alpha(opacity=0)">
-            <span style="writing-mode: tb-rl;">hello world</span> <!--세로쓰기 테스트-->
+          <div id = "emoji_div" style="filter:alpha(opacity=0); z-index:0">
+            <div id = "user_text" style="z-index: 1; display:inline-block; position:absolute"></div> <!--세로쓰기 테스트-->
           </div>
+         <!-- <div id = "add_text">
+            <button class ="button2" id = "text10" type = "button">10자</button>
+            <button class ="button2" id = "text30" type = "button">30자</button>
+          </div>-->
         </div>
       
     </form>
