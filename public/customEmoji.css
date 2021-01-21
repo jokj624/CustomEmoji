@@ -5,12 +5,10 @@
   width: 400px;
   height: 650px;
   background-color : #525252;
-  /*margin-left: 50px;*/
   font-size : 20px;
   overflow: auto;
   margin: auto;
   color : white;
- /*text-align : right;*/
 }
 .msgLine {
   margin: 15px;
@@ -67,14 +65,10 @@ input[type=text]{
   position : absolute;
 }
 #sendmsg{
-  /*width:50px;
-  height : 30px;*/
   right : 10px;
   top : 10px;
   position : absolute;
   display:inline-block;
-  /*margin-top :5px;*/
- /* border: 1px white solid;*/
 }
 .emoji{
   width: 32px;
@@ -153,9 +147,17 @@ input[type=text]{
   left : 75px;
 }
 #emoji_div > img{
-  position:absolute;
+  position: absolute;
   top : 65px;
   left : 65px;
+}
+#user_text{
+  font-size: 0.9em;
+  position : absolute;
+  text-align: center;
+}
+#spantxt{
+  text-align:center;
 }
 #emoji_navigator{
   border-bottom: 1px #ffcd05 solid;
@@ -202,11 +204,7 @@ input[type=text]{
   color : #1f1c1c;
   font-family: "a타이틀고딕5";
 }
-#user_text{
-  font-size: 0.9em;
-  position : absolute;
-  text-align: center;
-}
+
 /* Scroll Bar */
 
 /* width */

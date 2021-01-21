@@ -3,14 +3,14 @@
 		"name": "campus1",
 		"ten": {
 			"exist": 1,				
-			"location": "우"
+			"location": "상"
 		},
 		"thirty": {
-			"exist": 0,
-			"location": "없음"
+			"exist": 1,
+			"location": "좌"
 		},
-		"font": "a타이틀고딕2",
-		"color": "rgb(0, 0, 0)"
+		"font": "궁서",
+		"color": "rgb(255, 0, 0)"
 	},
 	"1": {
 		"name": "campus2",

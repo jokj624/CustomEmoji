@@ -109,42 +109,117 @@ $(document).on("click","#add", function(e) {
     }
     else if(exist10 == 0 && exist30 == 1){
       //30자 칸에다 넣어야 함
+      add30(str);
     }
    }
    else{
     if(exist30 == 1){
       //30자 칸에 바로 넣기
+      add30(str);
     }
-    else if(exit30 == 0 && exist10 == 1){
-      //10자로 잘라서 10자 칸에 넣기  
+    else if(exist30 == 0 && exist10 == 1){
+      //10자로 잘라서 10자 칸에 넣기
+      var str2 = str.substring(0,10);
+      add10(str2);  
     }
    }
 });
 
 function add10(str){
   //10자 텍스트 추가
+  $('#user_text').css('width', "auto");
+  $('#user_text').css('height', "auto");
+  $('#user_text').css('top', "");
+  $('#user_text').css('left', "");
+  $('#user_text').css('bottom', "");
+  $('#user_text').css('right', ""); //위치 초기화
   lo_ten = pick_emoji["ten"]["location"];
-  $('#user_text').text(str);
+  var str2;
+  if(lo_ten == "좌" || lo_ten =="우"){
+    str2 = str.replace(/(.{1})/g,"$1<br/>");
+  }
+  else{
+    str2 = str;
+  }
+  $('#spantxt').html(str2);
+  console.log(str2);
   $('#user_text').css('font-family', font);
   $('#user_text').css('color', color);
   
   if(lo_ten == "상"){
     $('#user_text').css('width', "250px");
     $('#user_text').css('top', "38px");
+    $('#user_text').css('display', "flex");
+    $('#user_text').css('justify-content', "center");
   }
   else if(lo_ten == "하"){  
     $('#user_text').css('width', "250px");
     $('#user_text').css('bottom', "38px");
+    $('#user_text').css('display', "flex");
+    $('#user_text').css('justify-content', "center");
   }
   else if(lo_ten == "좌"){
-    $('#user_text').css('writing-mode', "tb-rl");
     $('#user_text').css('height', "250px");
     $('#user_text').css('left', "38px");
+    $('#user_text').css('display', "flex");
+    $('#user_text').css('align-items', "center");
   }
   else if(lo_ten == "우"){
-    $('#user_text').css('writing-mode', "tb-rl");
     $('#user_text').css('height', "250px");
     $('#user_text').css('right', "38px");
+    $('#user_text').css('display', "flex");
+    $('#user_text').css('align-items', "center");
+  }
+}
+function add30(str){
+  $('#user_text').css('width', "auto");
+  $('#user_text').css('height', "auto");
+  $('#user_text').css('top', "");
+  $('#user_text').css('left', "");
+  $('#user_text').css('bottom', "");
+  $('#user_text').css('right', ""); //위치 초기화
+
+  $('#user_text').css('writing-mode', "");
+  lo_thirty = pick_emoji["thirty"]["location"];
+  var string2, str2;
+  if(str.length > 30){
+    string2 = str.substring(0, 30);
+  }
+  else{
+    string2 = str;
+  }
+  if(lo_thirty == "상" || lo_thirty == "하"){
+    str2 = string2.replace(/(.{10})/g,"$1<br/>");   //가로쓰기 한줄 10자 제한
+  }
+  if(lo_thirty == "좌" || lo_thirty == "우"){
+    str2 = string2.replace(/(.{5})/g,"$1<br/>");   //세로쓰기 한줄 6자 제한
+  }
+   
+  $('#user_text').css('font-family', font);
+  $('#user_text').css('color', color);
+  $('#spantxt').html(str2);
+  if(lo_thirty == "상"){
+      $('#user_text').css('width', "250px");
+      $('#user_text').css('top', "23px");
+      $('#user_text').css('display', "flex");
+      $('#user_text').css('justify-content', "center");
+  }
+  else if(lo_thirty == "하"){
+    $('#user_text').css('width', "250px");
+    $('#user_text').css('bottom', "23px");
+    $('#user_text').css('display', "flex");
+    $('#user_text').css('justify-content', "center");
+  }
+  else if(lo_thirty == "좌"){
+    $('#user_text').css('height', "250px");
+    $('#user_text').css('display', "flex");
+    $('#user_text').css('align-items', "center");
+  }
+  else if(lo_thirty == "우"){
+    $('#user_text').css('height', "250px");
+    $('#user_text').css('right', "0");
+    $('#user_text').css('display', "flex");
+    $('#user_text').css('align-items', "center");
   }
 }
 var chatView = document.getElementById('msg');
