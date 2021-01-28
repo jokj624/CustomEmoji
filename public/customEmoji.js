@@ -1,4 +1,3 @@
-
 var emoji_id;
 var emoji_info = new Object(); 
 var pick_emoji = new Object();
@@ -8,7 +7,7 @@ var font;
 var color;
 var exist10; 
 var exist30; 
-
+var fs = require('fs'); 
 $.getJSON("./22.json", function(data){
   emoji_info = data;
 });
@@ -257,23 +256,120 @@ chatForm.addEventListener('submit', function() {
 
     chatView.scrollTop = chatView.scrollHeight;
 });
+function sendEmoji(img){
+  //var msgText = $('#input_box');
+  if (img == null) {
+      return;
+  } else {
+    socket.emit('Image',img);
+      var msgLine = $('<div class="msgLine">');
+      var msgBox = $('<div class="me">');
+ 
+      msgBox.append(img);
+      msgBox.css('display', 'inline-block');
+      msgLine.css('text-align', 'right');
+      msgLine.append(msgBox);
+      $('#msg').append(msgLine);
+      chatView.scrollTop = chatView.scrollHeight;
+    }
+  socket.on('Image', function(msg) {
+    console.log(msg.image);
+    var msgLine = $('<div class="msgLine">');
+    var msgBox = $('<div class="msgBox">');
+            
+    msgBox.append(msg);
+    msgBox.css('display', 'inline-block');
 
+    msgLine.append(msgBox);
+    $('#msg').append(msgLine);
+    chatView.scrollTop = chatView.scrollHeight;
+});
+}
+
+var imgwidth;
+var imgheight;
+//이모티콘+텍스트 이미지 만들어내는 함수
 $(function(){          
-  $("#save").click(function() { 
+  $("#save").click(function() {
+      var spnwidth = $("#spantxt").width();
+      var spnheight = $("#spantxt").height();
+
+      if(lo_ten == '상' || lo_ten == '하' || lo_thirty == '상' || lo_thirty == '하') {
+        imgheight = 120 + spnheight + 30;
+        imgwidth = Math.max(120, spnwidth)+5;
+      }
+      else if(lo_ten == '좌' || lo_ten == '우' || lo_thirty == '좌' || lo_thirty == '우'){
+        imgheight = Math.max(120, spnheight)+5;
+        imgwidth = 120 + spnwidth  + 30;
+      }
+      console.log(spnwidth);
+      console.log(spnheight);
+
+      const img = document.createElement('img');
+      var check = 0;
+
        html2canvas($("#emoji_div"), {
            onrendered: function(canvas) {
-               canvas.toBlob(function(blob) {
-                var url = URL.createObjectURL(blob);
-                const img = document.createElement('img');
-                img.src = url;
-                img.onload = function() {
-                  //cleanup.
-                  URL.revokeObjectURL(this.src);
-                }
-                $('#msg').append(img);
-                 //  saveAs(blob, 'image.png');
-               });
+               canvas.toBlob((blob) => {
+                   var url = URL.createObjectURL(blob);
+                   img.src = url;
+          
+                    img.onload = function () {  
+                     //cleanup.
+                     
+                  //URL.revokeObjectURL(this.src);
+                      if(check == 0) {
+                      cropImage(
+                        this, {
+                        x : (250 - imgwidth)/2,     // crosp keeping the center 
+                        y : (250 - imgheight)/2,
+                        width : imgwidth,
+                        height : imgheight,
+                        }, spnwidth, spnheight);
+                        check = 1;
+
+                     }
+                     
+                   };
+                     console.log(img.src);
+                     //  saveAs(blob, 'image.png');
+                 
+                   sendEmoji(img);
+                   check = 0;
+                 });    
+                
            }
        });
    });
 });
+
+
+function cropImage(image, croppingCoords, sw,sh) {
+  var cc = croppingCoords;
+  var workCan = document.createElement("canvas"); // create a canvas
+  workCan.width = Math.floor(cc.width);  // set the canvas resolution to the cropped image size
+  workCan.height = Math.floor(cc.height);
+  var ctx = workCan.getContext("2d");    // get a 2D rendering interface
+  var cutx=0, cuty=0;
+  if(lo_ten == '상' || lo_thirty == '상') {
+    cuty = sh;
+  }
+  else if(lo_ten == '하' || lo_thirty == '하'){
+    cuty = -sh;
+  }
+  else if(lo_ten == '우'|| lo_thirty == '우'){
+    cutx = -sw;
+  }
+  else if(lo_ten == '좌' || lo_thirty == '좌') {
+    cutx = sw;
+  }
+  if(lo_thirty == '좌' || lo_thirty == '우'){
+    cutx /= 2;
+  }
+  else if(lo_thirty == '상' || lo_thirty == '하'){
+    cuty /= 2;
+  }
+  ctx.drawImage(image,-Math.floor(cc.x)+cutx, -Math.floor(cc.y)+cuty); // draw the image offset to place it correctly on the cropped region
+  image.src = workCan.toDataURL();       // set the image source to the canvas as a data URL
+  return image;
+}

@@ -23,6 +23,11 @@ io.on('connection', function(socket) {
             }
         }); 
     });
+
+    socket.on('Image', function(msg){
+        console.log(msg);
+        socket.emit(msg);
+    });
  
     socket.on('disconnect', function() {
         socketList.splice(socketList.indexOf(socket), 1);
