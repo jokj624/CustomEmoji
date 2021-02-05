@@ -9,8 +9,10 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "aws-sdk": "^2.834.0",
     "express": "^4.17.1",
     "multer": "^1.4.2",
+    "multer-s3": "^2.9.0",
     "ngrok": "^3.4.0",
     "socket.io": "^3.0.5"
   }

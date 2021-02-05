@@ -115,4 +115,6 @@ dist
 
 pakage.json
 pakage-lock.json
+
+awsconfig.json
 # End of https://www.toptal.com/developers/gitignore/api/node,web

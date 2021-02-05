@@ -9,7 +9,7 @@
   <script src = "https://cdn.rawgit.com/eligrey/FileSaver.js/5ed507ef8aa53d8ecfea96d96bc7214cd2476fd2/FileSaver.min.js"></script>
   <!--<script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>-->
   <script src = "https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.5.0-beta4/html2canvas.js"></script>
-  <link href="http://localhost:3000/customEmoji.css" type="text/css" rel="stylesheet"/>
+  <link href="http://localhost:4000/customEmoji.css" type="text/css" rel="stylesheet"/>
  <script src="/socket.io/socket.io.js"></script>
  <script>const socket = io();</script>
 </head>
@@ -50,12 +50,15 @@
         <div id="custom_emoji" style ="z-index : 2">
           <div id = "menu">
             <div id = "menu_bnt">
-              <button class = "button" id = "add" type = "button">텍스트 삽입</button>
-              <button class = "button" id = "save" type = "button">보내기</button>
+              <button class = "button btn-warning" id = "add" type = "button">텍스트 삽입</button>
+              <form id = "upload" method = "post" enctype="multipart/form-data">
+                <button class = "button btn-warning" id = "save" type = "button">보내기</button>
+              </form>
             </div>
+            <button id = "close_emo" type = "button" onclick ='closeEmoji()'><img src="img/cancel.png" style = "width : 12px; height:12px" /></button>
           </div>
           <div id = "emoji_div" style="filter:alpha(opacity=0); z-index:0">
-            <div id = "user_text" style="z-index: 1; display:inline-block; position:absolute"><span id="spantxt"></span></div> <!--세로쓰기 테스트-->
+            <div id = "user_text" style="display:inline-block; position:absolute"><span id="spantxt"></span></div> <!--세로쓰기 테스트-->
           </div>
          <!-- <div id = "add_text">
             <button class ="button2" id = "text10" type = "button">10자</button>
@@ -68,5 +71,5 @@
   </div>
 </div>
 </body>
-<script type="text/javascript" src="http://localhost:3000/customEmoji.js"></script>
+<script type="text/javascript" src="http://localhost:4000/customEmoji.js"></script>
 </html>
