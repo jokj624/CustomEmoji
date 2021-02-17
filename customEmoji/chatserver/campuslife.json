@@ -1,0 +1,38 @@
+{
+	"0": {
+		"name": "campus1",
+		"ten": {
+			"exist": 1,
+			"location": "하"
+		},
+		"thirty": {
+			"exist": 0,
+			"location": "없음"
+		},
+		"color": ""
+	},
+	"1": {
+		"name": "campus2",
+		"ten": {
+			"exist": 1,
+			"location": "상"
+		},
+		"thirty": {
+			"exist": 1,
+			"location": "우"
+		},
+		"color": ""
+	},
+	"2": {
+		"name": "campus3",
+		"ten": {
+			"exist": 1,
+			"location": "상"
+		},
+		"thirty": {
+			"exist": 1,
+			"location": "우"
+		},
+		"color": ""
+	}
+}

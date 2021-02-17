@@ -1,0 +1,80 @@
+{
+	"0": {
+		"name": "campus1",
+		"ten": {
+			"exist": 1,				
+			"location": "상"
+		},
+		"thirty": {
+			"exist": 1,
+			"location": "하"
+		},
+		"font": "궁서",
+		"color": "rgb(255, 0, 0)"
+	},
+	"1": {
+		"name": "campus2",
+		"ten": {
+			"exist": 1,
+			"location": "좌"
+		},
+		"thirty": {
+			"exist": 1,
+			"location": "하"
+		},
+		"font": "궁서",
+		"color": ""
+	},
+	"2": {
+		"name": "campus3",
+		"ten": {
+			"exist": 1,
+			"location": "하"
+		},
+		"thirty": {
+			"exist": 1,
+			"location": "좌"
+		},
+		"font": "a타이틀고딕2",
+		"color": "rgb(72, 37, 155)"
+	},
+	"3": {
+		"name": "campus4",
+		"ten": {
+			"exist": 1,
+			"location": "하"
+		},
+		"thirty": {
+			"exist": 1,
+			"location": "우"
+		},
+		"font": "a타이틀고딕2",
+		"color": "rgb(72, 37, 155)"
+	},
+	"4": {
+		"name": "campus5",
+		"ten": {
+			"exist": 0,
+			"location": "없음"
+		},
+		"thirty": {
+			"exist": 1,
+			"location": "하"
+		},
+		"font": "a타이틀고딕2",
+		"color": "rgb(72, 37, 155)"
+	},
+	"5": {
+		"name": "campus6",
+		"ten": {
+			"exist": 0,
+			"location": "없음"
+		},
+		"thirty": {
+			"exist": 1,
+			"location": "좌"
+		},
+		"font": "a타이틀고딕2",
+		"color": "rgb(72, 37, 155)"
+	}
+}
