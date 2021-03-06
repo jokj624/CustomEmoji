@@ -1,0 +1,399 @@
+#whole {
+   width:100%;
+   margin : auto;
+}
+
+#a {
+   background-color : #525252;
+   position : relative;
+   height : 610px;
+}   
+#b {
+   background-color : #525252;
+   position : absolute;
+   height : 610px;
+   width : 78%;
+   display : none;
+}
+#a2 {
+   background-color : #525252;
+   height : 610px;
+}
+
+#menu {
+   background-color : #525252;
+}
+
+#menu > ul {
+   padding-top : 10px;
+   text-align : center;
+}
+#menu_icon {
+   width : 30px;
+   height : 30px;
+}
+#menu_icon_T {
+   width : 28px;
+   height : 28px;
+}
+
+#section1 {
+   background-color : #525252;
+   display : block;
+   width : 79%;
+   float : left;
+   text-align : center;
+}
+#section1_r {
+   background-color : #525252;
+   display : block;
+   width : 20%;
+   float : right;
+}
+
+#section2 {
+   clear : both;
+   padding-top : 0.2%;
+   color : white;
+}
+#section2 > div {
+	overflow : auto;
+}
+
+#subtitle {
+   font-size : 1.2em;
+}
+
+nav ul {
+   list-style-type:none;
+   text-align: left;
+   color : white;
+   font-size:1em;
+}
+
+nav ul li {
+   padding-top: 12px;
+   padding-bottom: 25px;
+   padding-right: 50px;
+   display : inline-block;
+}
+
+.input-file-button {
+   display : block;
+}
+#btn_pj > a {
+	text-decoration : none;
+	color : white;
+}
+
+#div1 > img {
+   margin : auto;
+   display : block;
+   padding-top : 50px;
+}
+
+#text {
+   top: 50%;
+   left: 50%;
+   width : 300px;
+   height : 40px;
+   margin-top : -202px;
+   margin-left : -150px;
+}
+
+#text_form > textarea{
+   border: 1px solid red;
+   border-radius : 0px;
+   height : 40px;
+   width : 300px;
+   background-color:transparent;
+   font-size : 1.5em;
+   font-family : arial;
+}
+
+#textT {
+   top: 50%;
+   left: 50%;
+   width : 130px;
+   height : 200px;
+   margin-top : -100px;
+   margin-left : 160px;
+}
+
+#textT_form > textarea{
+   border: 1px solid red;
+   border-radius : 0px;
+   height : 200px;
+   width : 130px;
+   background-color:transparent;
+   font-size : 1.5em;
+   font-family : arial;
+}
+
+select {
+   width: 200px;
+   padding: .6em .5em;
+   margin-top : 1em;
+   border: 1px solid #2b2b2b;
+   font-family: inherit;
+   font-size : 0.8em;
+   background: url("img/arrow.png") no-repeat 95% 50%;
+   border-radius: 0px;
+   -webkit-appearance: none;
+   -moz-appearance: none;
+   appearance: none;
+   color: white;
+}
+
+option{
+   color : black;
+   background-color: transparent;
+   font-size : 1.2em;
+}
+input[type=color]{
+    padding : 0% 0%;
+    border: none;
+    background-color : transparent;
+    outline: none;
+    margin-left : 10px;
+    -webkit-appearance: none;
+}
+input[type=radio]{
+   color : white;
+   width : 50px;
+}
+input[type=text]{
+	width : 60%;
+	height: 30px;
+    border-radius: 4px;
+    font-size: 0.8em;
+}
+
+.datename{
+   display : inline-block;
+   text-align: center;
+   position : relative;
+   top: 85%;
+   width : 400px;
+   height : 60px;
+   margin-top : -30px;
+}
+#name {
+   height : 50px;
+   position : relative;
+}
+#date {
+   height : 50px;
+   position : relative;
+   left: 200%;
+}
+#emoticon {
+   top: 50%;
+   left: 50%;
+   width : 300px;
+   height : 300px;
+   margin-top : -150px;
+   margin-left : -150px;
+}
+
+#div2 {
+   background-color : #525252;
+   display : block;
+   height : 250px;
+}
+
+
+#newul {
+   list-style-type:none;
+   margin-top : -0.5px;
+   color : white;
+   font-size : 1.2em;
+}
+
+#newul > li {
+   padding-top : 15px;
+   padding-bottom : 10px;
+   
+}
+#newul > label {
+	margin-left : 5%;
+	width:20%;
+	height : 30px;
+  	border:2px solid #2b2b2b;
+  	text-align:center;
+  	cursor:pointer;
+  	overflow:hidden;
+  	font-size : 0.8em;
+  	padding : 3%;
+}
+#newulT {
+   list-style-type:none;
+   margin-top : -0.5px;
+   color : white;
+   font-size : 1.2em;
+}
+
+#newulT > li {
+   padding-top : 15px;
+   padding-bottom : 10px;
+}
+#listD {
+   padding : 10px;
+   border-bottom : 0.5px solid #2b2b2b;
+   color : white;
+   font-size : 1.2em;
+   
+}
+
+#listTO {
+   padding : 10px;
+   border-bottom : 0.5px solid #2b2b2b;
+   color : white;
+   font-size : 1.2em;
+   
+}
+#talkul {
+   list-style-type:none;
+   margin-top : -0.5px;
+   color : white;
+   font-size : 1.2em;
+}
+
+#talkul > li {
+   padding-top : 15px;
+   padding-bottom : 10px;
+   padding-right : 40px;
+   display : inline-block;
+}
+
+#listT {
+   padding : 10px;
+   border-bottom : 0.5px solid #2b2b2b;
+   color : white;
+   font-size : 1.2em;
+   
+}
+
+#talk {
+   width : 50px;
+   height : 50px;
+}
+
+#textTalk {
+   width : 350px;
+   height : 400px;
+}
+/*chatting*/
+.box {
+   margin-top: 35px;
+   /*position : absolute;
+   top : 35px;
+   left : 50%;
+   transform : translateX(-50%);*/
+}
+#msg{
+  border: 1px white solid;
+  width: 320px;
+  height: 500px;
+  background-color :	#9bbbd4;
+  font-size : 20px;
+  overflow: auto;
+  margin: auto;
+  color : white;
+}
+
+
+input[type=text]{
+   border: 1px #F2F2F2 solid;
+   background-color : #E6E6E6;
+   width: 205px;
+   height : 28px;
+   overflow: auto;
+   margin : 4px;
+   padding-left: 3px;
+   padding-top: 5px;
+ }
+ 
+ .send {
+    width: 320px;
+    height : 37px;
+    margin: auto;
+    background-color : white;
+ }
+ .send > form {
+   width : 320px;
+   height : 37px;
+   position : absolute;
+ }
+ #sendmsg{
+   width:15%;
+   height : 75%;
+   right : 10px;
+   top : 4px;
+   position : absolute;
+   display:inline-block;
+   /*margin-top :5px;*/
+  /* border: 1px white solid;*/
+ }
+ .emoji{
+   width: 30px;
+   position : absolute;
+   display: inline-block;
+   top : 3px;
+   right : 70px;
+   /*margin-left : 5px;
+   margin-right : 5px;*/
+ }
+ .emoji_pickup{
+   cursor: pointer;
+   display : inline-block;
+ }
+ 
+ #emoji_pickup_before{
+   margin-right: 10px
+ }
+ 
+ #emoji_pickup_after{
+   margin-right: 10px;
+   display: none
+ }
+
+ .button {
+   margin-left : 5px;
+   display : block;
+   border : 5px;
+   border-radius : 5px;
+   font-size : 0.9em;
+   margin-top : 7px;
+}
+
+.btn-warning{
+   color : #1f1c1c;
+   font-family: "a타이틀고딕5";
+ }
+
+
+ #showimg{
+    display : block;
+    position : relative;
+    width: 315px;
+    height: 250px;
+    top : 10px;   
+ }
+ 
+ #sample10{
+    font-size : 0.65em;
+    text-align: center;
+ }
+
+ #sample30{
+   font-size : 0.65em;
+   text-align : center;
+}
+
+#prvemo {
+   position : absolute;
+   right: 18%;
+   top: 10%;
+   z-index: 3;
+}

@@ -1,0 +1,74 @@
+{
+   "0": {
+      "name": "campus1",
+      "ten": {
+         "exist": 1,
+         "location": "상"
+      },
+      "thirty": {
+         "exist": 0,
+         "location": "없음"
+      },
+      "color": "rgb(161, 8, 8)"
+   },
+   "1": {
+      "name": "campus2",
+      "ten": {
+         "exist": 1,
+         "location": "하"
+      },
+      "thirty": {
+         "exist": 0,
+         "location": "없음"
+      },
+      "color": "rgb(255, 136, 0)"
+   },
+   "2": {
+      "name": "campus3",
+      "ten": {
+         "exist": 0,
+         "location": "없음"
+      },
+      "thirty": {
+         "exist": 1,
+         "location": "우"
+      },
+      "color": "rgb(155, 70, 70)"
+   },
+   "3": {
+      "name": "campus4",
+      "ten": {
+         "exist": 1,
+         "location": "하"
+      },
+      "thirty": {
+         "exist": 1,
+         "location": "우"
+      },
+      "color": "rgb(255, 0, 0)"
+   },
+   "4": {
+      "name": "campus5",
+      "ten": {
+         "exist": 0,
+         "location": "없음"
+      },
+      "thirty": {
+         "exist": 1,
+         "location": "좌"
+      },
+      "color": "rgb(115, 94, 94)"
+   },
+   "5": {
+      "name": "campus6",
+      "ten": {
+         "exist": 1,
+         "location": "하"
+      },
+      "thirty": {
+         "exist": 0,
+         "location": "없음"
+      },
+      "color": "rgb(29, 255, 26)"
+   }
+}
