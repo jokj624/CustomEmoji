@@ -1,0 +1,92 @@
+{
+	"0": {
+		"name": "kakao1",
+		"ten": {
+			"exist": 1,				
+			"location": "상"
+		},
+		"thirty": {
+			"exist": 1,
+			"location": "좌"
+		},
+		"font": "a고딕11",
+		"color": "rgb(0, 100, 0)",
+        "date" : "우",
+		"username" : "하"
+	},
+	"1": {
+		"name": "kakao2",
+		"ten": {
+			"exist": 1,
+			"location": "상"
+		},
+		"thirty": {
+			"exist": 1,
+			"location": "우"
+		},
+		"font": "a고딕11",
+		"color": "rgb(255,0,0)",
+        "date" : "하",
+		"username" : "하"
+	},
+	"2": {
+		"name": "kakao3",
+		"ten": {
+			"exist": 1,
+			"location": "상"
+		},
+		"thirty": {
+			"exist": 1,
+			"location": "우"
+		},
+		"font": "a타이틀고딕2",
+		"color": "rgb(0, 0, 255)",
+        "date" : "하",
+		"username" : "좌"
+	},
+	"3": {
+		"name": "kakao4",
+		"ten": {
+			"exist": 1,
+			"location": "좌" 
+		},
+		"thirty": {
+			"exist": 1,
+			"location": "우"
+		},
+		"font": "a남한산성",
+		"color": "rgb(0, 0, 0)",
+        "date" : "상",
+		"username" : "상"
+	},
+	"4": {
+		"name": "kakao5",
+		"ten": {
+			"exist": 0,
+			"location": "없음"
+		},
+		"thirty": {
+			"exist": 1,
+			"location": "하"
+		},
+		"font": "a타이틀고딕2",
+		"color": "rgb(255, 0, 255)",
+        "date" : "상",
+		"username" : "우"
+	},
+	"5": {
+		"name": "kakao6",
+		"ten": {
+			"exist": 1,
+			"location": "우"
+		},
+		"thirty": {
+			"exist": 1,
+			"location": "좌"
+		},
+		"font": "a타이틀고딕2",
+		"color": "rgb(0, 255, 255)",
+        "date" : "상",
+		"username" : "하"
+	}
+}
