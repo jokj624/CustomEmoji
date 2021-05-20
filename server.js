@@ -18,7 +18,7 @@ server.listen(4000, function() {
 });
  
 const names = ['정아', '시원'];
-let user = 0;
+let user = 0;   
 io.on('connection', function(socket) {
     socketList.push(socket);
     console.log('User Join');
